@@ -7,12 +7,18 @@
 //
 
 #import "IMTAppDelegate.h"
+#import <IMTSDK/IMTSDK.h>
 
 @implementation IMTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    // 创建初始化配置信息
+    [[IMTSDK shareManager] setChannelId:@"测试云真机不包含BitCode11"];
+    [[IMTSDK shareManager] setUAId:@"UA-test- 260002"];
+    [[IMTSDK shareManager] creatManageData];
+
     return YES;
 }
 

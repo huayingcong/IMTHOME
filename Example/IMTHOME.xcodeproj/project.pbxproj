@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		25C8BC51187CB34EE7782462 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		25C8BC51187CB34EE7782462 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		50DAF116706D723C32D93B0B /* Pods-IMTHOME_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMTHOME_Example.release.xcconfig"; path = "Target Support Files/Pods-IMTHOME_Example/Pods-IMTHOME_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5ED44C537E164B68DBA6CB29 /* Pods-IMTHOME_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMTHOME_Tests.debug.xcconfig"; path = "Target Support Files/Pods-IMTHOME_Tests/Pods-IMTHOME_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* IMTHOME_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMTHOME_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,13 +60,13 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		73127E790991595CDD5198C0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		73127E790991595CDD5198C0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87FD05147199847B4E082FFA /* Pods-IMTHOME_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMTHOME_Tests.release.xcconfig"; path = "Target Support Files/Pods-IMTHOME_Tests/Pods-IMTHOME_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8D176269966C27D233CA9ABA /* Pods-IMTHOME_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMTHOME_Example.debug.xcconfig"; path = "Target Support Files/Pods-IMTHOME_Example/Pods-IMTHOME_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A76417CC53946335632D16C7 /* Pods_IMTHOME_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMTHOME_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FBF3CC4E9EB252D9448657 /* Pods_IMTHOME_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMTHOME_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD75469B39E6660CFA02B69D /* IMTHOME.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = IMTHOME.podspec; path = ../IMTHOME.podspec; sourceTree = "<group>"; };
+		CD75469B39E6660CFA02B69D /* IMTHOME.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IMTHOME.podspec; path = ../IMTHOME.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 				5ED44C537E164B68DBA6CB29 /* Pods-IMTHOME_Tests.debug.xcconfig */,
 				87FD05147199847B4E082FFA /* Pods-IMTHOME_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				58B76FFC8EFA7BE96151FF48 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,6 +256,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -315,24 +314,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		58B76FFC8EFA7BE96151FF48 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IMTHOME_Example/Pods-IMTHOME_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IMTHOME/IMTHOME.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IMTHOME.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IMTHOME_Example/Pods-IMTHOME_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E900F06C82BF2D4DC73A1736 /* [CP] Check Pods Manifest.lock */ = {
