@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IMTHOME'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = '全流量SDK - of framewirkPod.'
   s.description      = 'TODO: 上传pod的一个演示.'
   s.homepage         = 'https://github.com/huayingcong/IMTHOME'
